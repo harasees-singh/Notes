@@ -33,8 +33,7 @@ print("hey yo what up", end = "\n")
 x_int = 10
 y_int = 20
 # in python decimals are called float
-# random shit: in the year 2050 50 cent died . that is a weird joke wtf 
-# my name is sanket singh and I am a nub
+
 # x_float is the most stupid variable name I have ever heard 
 sanket = "my name is sanket"
 print(sanket)
