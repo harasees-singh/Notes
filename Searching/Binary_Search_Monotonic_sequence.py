@@ -16,7 +16,6 @@ def BinarySearch(li, left, right):
     
 print(BinarySearch(li, 0, len(li)-1))
 
-
 # discrete binary search can be carried out on monotonic sequences
 # there are n rectangles of same size (w*h) it is required to find a square of the smallest size
 # into which these rectangles can be packed we can't rotate the rectangles
@@ -62,6 +61,9 @@ print(adjust_rectangle(2, 3, 3))
 
 # i will reuse the already written good()
 
+def good_print(mid, n, x, y):
+    return (mid//x) + (mid//y) >= n
+
 def printing_copies(n, x, y):
     if n == 1:
         return min(x,y)
@@ -70,8 +72,8 @@ def printing_copies(n, x, y):
     high = max(x,y)*n
     ans = -1
     while low < high:
-        mid = low = (high-low)//2
-        if good(mid, n-1, x, y):
+        mid = low + (high-low)//2
+        if good_print(mid, n-1, x, y):
             ans = mid
             high = mid-1
         else:
